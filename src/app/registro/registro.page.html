@@ -11,6 +11,7 @@
   <ion-card>
     <ion-card-header>
       <ion-card-title>Registro</ion-card-title>
+      <ion-back-button> </ion-back-button>
     </ion-card-header>
     <ion-card-content>
       <form [formGroup]="formularioRegistro" (keyup.enter)="guardar()">
@@ -27,7 +28,7 @@
         <ion-input formControlName="confirmacionPassword" type="password"></ion-input>
       </ion-item>
       <br>
-      <ion-button (click)="guardar()">Registrarse
+      <ion-button shape="round" [routerLink]="['/login']" (click)="guardar()">Registrarse
       </ion-button>
     </form>
     </ion-card-content>
